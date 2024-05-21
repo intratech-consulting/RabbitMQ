@@ -12,6 +12,7 @@ services:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - my_shared_network  # Make sure this matches in both files
+    restart: always
 
 volumes:
   rabbitmq_data:
