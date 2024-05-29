@@ -119,6 +119,14 @@
         },
         {
             "arguments":{},
+            "destination":"heartbeat_queue",
+            "destination_type":"queue",
+            "routing_key":"heartbeat_queue",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
             "destination":"crm",
             "destination_type":"queue",
             "routing_key":"attendance.frontend",
@@ -225,14 +233,6 @@
             "arguments":{},
             "destination":"crm",
             "destination_type":"queue",
-            "routing_key":"user.crm",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"crm",
-            "destination_type":"queue",
             "routing_key":"user.facturatie",
             "source":"amq.topic",
             "vhost":"/"
@@ -313,6 +313,14 @@
             "arguments":{},
             "destination":"facturatie",
             "destination_type":"queue",
+            "routing_key":"user.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"facturatie",
+            "destination_type":"queue",
             "routing_key":"user.frontend",
             "source":"amq.topic",
             "vhost":"/"
@@ -346,6 +354,22 @@
             "destination":"facturatie",
             "destination_type":"queue",
             "routing_key":"user.planning",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"frontend",
+            "destination_type":"queue",
+            "routing_key":"attendance.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"frontend",
+            "destination_type":"queue",
+            "routing_key":"attendance.planning",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -393,6 +417,14 @@
             "arguments":{},
             "destination":"frontend",
             "destination_type":"queue",
+            "routing_key":"user.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"frontend",
+            "destination_type":"queue",
             "routing_key":"user.facturatie",
             "source":"amq.topic",
             "vhost":"/"
@@ -426,14 +458,6 @@
             "destination":"frontend",
             "destination_type":"queue",
             "routing_key":"user.planning",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"heartbeat_queue",
-            "destination_type":"queue",
-            "routing_key":"heartbeat_queue",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -473,6 +497,14 @@
             "arguments":{},
             "destination":"inventory",
             "destination_type":"queue",
+            "routing_key":"user.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"inventory",
+            "destination_type":"queue",
             "routing_key":"user.facturatie",
             "source":"amq.topic",
             "vhost":"/"
@@ -506,6 +538,30 @@
             "destination":"inventory",
             "destination_type":"queue",
             "routing_key":"user.planning",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"kassa",
+            "destination_type":"queue",
+            "routing_key":"company.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"kassa",
+            "destination_type":"queue",
+            "routing_key":"company.frontend",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"kassa",
+            "destination_type":"queue",
+            "routing_key":"company.planning",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -545,6 +601,14 @@
             "arguments":{},
             "destination":"kassa",
             "destination_type":"queue",
+            "routing_key":"user.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"kassa",
+            "destination_type":"queue",
             "routing_key":"user.facturatie",
             "source":"amq.topic",
             "vhost":"/"
@@ -578,38 +642,6 @@
             "destination":"kassa",
             "destination_type":"queue",
             "routing_key":"user.planning",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"mailing",
-            "destination_type":"queue",
-            "routing_key":"user.facturatie",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"mailing",
-            "destination_type":"queue",
-            "routing_key":"user.frontend",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"mailing",
-            "destination_type":"queue",
-            "routing_key":"user.inventory",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"mailing",
-            "destination_type":"queue",
-            "routing_key":"user.kassa",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -633,7 +665,55 @@
             "arguments":{},
             "destination":"mailing",
             "destination_type":"queue",
+            "routing_key":"user.crm",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"mailing",
+            "destination_type":"queue",
+            "routing_key":"user.facturatie",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"mailing",
+            "destination_type":"queue",
+            "routing_key":"user.frontend",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"mailing",
+            "destination_type":"queue",
+            "routing_key":"user.inventory",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"mailing",
+            "destination_type":"queue",
+            "routing_key":"user.kassa",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"mailing",
+            "destination_type":"queue",
             "routing_key":"user.planning",
+            "source":"amq.topic",
+            "vhost":"/"
+        },
+        {
+            "arguments":{},
+            "destination":"planning",
+            "destination_type":"queue",
+            "routing_key":"attendance.crm",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -649,14 +729,6 @@
             "arguments":{},
             "destination":"planning",
             "destination_type":"queue",
-            "routing_key":"attendance.planning",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"planning",
-            "destination_type":"queue",
             "routing_key":"company.crm",
             "source":"amq.topic",
             "vhost":"/"
@@ -665,7 +737,7 @@
             "arguments":{},
             "destination":"planning",
             "destination_type":"queue",
-            "routing_key":"company.facturatie",
+            "routing_key":"company.frontend",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -673,7 +745,7 @@
             "arguments":{},
             "destination":"planning",
             "destination_type":"queue",
-            "routing_key":"company.inventory",
+            "routing_key":"company.kassa",
             "source":"amq.topic",
             "vhost":"/"
         },
@@ -690,38 +762,6 @@
             "destination":"planning",
             "destination_type":"queue",
             "routing_key":"event.frontend",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"planning",
-            "destination_type":"queue",
-            "routing_key":"order.facturatie",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"planning",
-            "destination_type":"queue",
-            "routing_key":"order.inventory",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"planning",
-            "destination_type":"queue",
-            "routing_key":"product.facturatie",
-            "source":"amq.topic",
-            "vhost":"/"
-        },
-        {
-            "arguments":{},
-            "destination":"planning",
-            "destination_type":"queue",
-            "routing_key":"product.inventory",
             "source":"amq.topic",
             "vhost":"/"
         },
